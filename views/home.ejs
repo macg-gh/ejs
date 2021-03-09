@@ -1,0 +1,29 @@
+<%- include('partials/header'); %>
+<h1>Home</h1>
+<p><%=startPara%></p>
+
+<% postsArray.forEach(function(currentPost){  %>
+<div class="container">
+  <h4>Title</h4>
+  <p> <%= currentPost.title %></p>
+  <h4>Content</h4>
+  <% const lines = currentPost.content.split(/\r?\n/); %>
+  <% lines.forEach(function(line){ %>
+  <p><%= line %></p>
+  <% }) %>
+</div>
+<% }); %>
+
+
+<%- include('partials/footer'); %>
+
+<!-- https://ejs.co/ has the syntax with a semicolon and then no trailing hypen, feb 1 20201 -->
+<!-- but double quote, double hyphen, no semi also worked. -->
+<!-- Next goal is to get nice bootstrap classes applied between the header and teh footer
+so the posts listed don't overrun the footer..
+feb 22 I think I achieved this by messing with the CSS
+here's how you could console log here instead of just rendering:
+open bracket , percent sign, console.log("HHEEYEYEYE" + currentPost.title)  percent sign, close bracket
+can do this for the content too just change .title to .content
+
+-->

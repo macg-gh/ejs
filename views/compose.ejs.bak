@@ -1,0 +1,13 @@
+<%- include('partials/header'); %>
+<h1>Compose</h1>
+<form class="" action="/blogpub" method="post">
+  <h4><strong>Title</strong></h4>
+  <!-- left off setting this to full width with the width css property. Will use a class for this, not the ID. -->
+  <input id="blogPostTitle" type="text" name="blogPostTitle">
+  <h4><strong>Post</strong></h4>
+  <input id="blogPostContent" type="text" name="blogPostContent">
+  <br />
+  <br />
+  <button type="submit">Publish</button>
+</form>
+<%- include('partials/footer'); %>
