@@ -1,0 +1,11 @@
+Titles that should match.
+in posts Array - provided in /posts URL
+
+Another post  - Another-post    - will
+Another post  - another-post    - will
+Another post  - AnOthEr-poSt    - won't
+Another post  - Another%20post   - 
+aNoTher pOsT  - Another-post
+aNoTher pOsT  - AnOthEr-poSt
+aNoTher-pOsT  - AnOthEr-poSt
+aNoTher---pOsT  - AnOthEr------poSt
