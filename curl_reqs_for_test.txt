@@ -1,0 +1,15 @@
+curl -X POST -d 'blogPostTitle=Another post' -d 'blogPostContent=111ONc%0D%0AOnce, there was %0D%0Athis guy' http://localhost:3000/blogpub
+curl -X POST -d 'blogPostTitle=Another----------post' -d 'blogPostContent=111ONc%0D%0AOnce, there was %0D%0Athis guy' http://localhost:3000/blogpub
+curl -X POST -d 'blogPostTitle=aNoTher pOsT' -d 'blogPostContent=2222%0D%0Awho made his wife so mad one nhight' http://localhost:3000/blogpub
+curl -X POST -d 'blogPostTitle=aNoTher---pOsT' -d 'blogPostContent=33333%0D%0AOnce, ther was%0D%0A theis %0D%0Agirl whot' http://localhost:3000/blogpub
+curl -X POST -d 'blogPostTitle=Another_post' -d 'blogPostContent=444444Nc%0D%0AOnce, there was %0D%0Athis guy' http://localhost:3000/blogpub
+curl -X POST -d 'blogPostTitle=Another___post' -d 'blogPostContent=55554Nc%0D%0AOnce, there was %0D%0Athis guy' http://localhost:3000/blogpub
+
+wget --timeout=1 --tries=1 http://localhost:3000/posts/Another-post
+wget --timeout=1 --tries=1 http://localhost:3000/posts/another-post
+wget --timeout=1 --tries=1 http://localhost:3000/posts/another------post
+wget --timeout=1 --tries=1 http://localhost:3000/posts/Another%20post
+wget --timeout=1 --tries=1 http://localhost:3000/posts/AnOthEr-poSt
+wget --timeout=1 --tries=1 http://localhost:3000/posts/AnOthEr------poSt
+wget --timeout=1 --tries=1 http://localhost:3000/posts/Another__post
+wget --timeout=1 --tries=1 http://localhost:3000/posts/Another_______----_post
